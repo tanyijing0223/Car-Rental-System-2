@@ -151,9 +151,10 @@ void returnCar(Customer c) {
 
     ofstream outFile("rental.txt");
     for (auto const& rec : rentals) {
-        outFile << rec.customerIC << " " << rec.carID << " " << rec.status << " " 
+        outFile << rec.customerIC << " " << rec.carID << " " << rec.carModel << " " << rec.status << " " 
                 << rec.dateRented << " " << rec.dateReturned << " " << rec.days << endl;
     }
     outFile.close();
     cin.ignore(); cin.get();
+
 }
